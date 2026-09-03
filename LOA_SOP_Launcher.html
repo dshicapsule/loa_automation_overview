@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capsule LOA Automation — SOP</title>
+<style>
+  html,body{margin:0;height:100%;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  #bar{background:#1b2a4a;color:#fff;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:12px}
+  #bar b{font-weight:700}
+  #bar a{color:#cfe0ff;margin-left:auto}
+  iframe{border:0;width:100%;height:calc(100vh - 35px);display:block}
+  #err{padding:24px;color:#333;line-height:1.6}
+</style>
+</head>
+<body>
+
+<!-- ============================================================= -->
+<!-- EDIT THIS ONE LINE to point at the latest hosted SOP.         -->
+<!-- Host LOA_Automation_Flow_Interactive.html on GitHub Pages,    -->
+<!-- then paste that page's URL below (must be a Pages / githack   -->
+<!-- URL that serves text/html — NOT a raw.githubusercontent link).-->
+<!-- ============================================================= -->
+<script>
+  var SOP_URL = "https://YOUR-USERNAME.github.io/loa-sop/LOA_Automation_Flow_Interactive.html";
+</script>
+
+<div id="bar">
+  <b>Capsule LOA Automation SOP</b>
+  <a id="direct" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+</div>
+<iframe id="frame" title="LOA SOP"></iframe>
+
+<script>
+  var f = document.getElementById('frame');
+  var d = document.getElementById('direct');
+  d.href = SOP_URL;
+  if (SOP_URL.indexOf('YOUR-USERNAME') > -1) {
+    document.body.innerHTML =
+      '<div id="err"><h2>Set your SOP URL first</h2>' +
+      '<p>Open this file and replace the <code>SOP_URL</code> value near the top with the ' +
+      'GitHub Pages URL of <code>LOA_Automation_Flow_Interactive.html</code>. ' +
+      'Then this launcher always shows the latest version.</p></div>';
+  } else {
+    f.src = SOP_URL;
+  }
+</script>
+
+</body>
+</html>
